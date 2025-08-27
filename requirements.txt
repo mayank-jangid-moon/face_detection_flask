@@ -1,0 +1,11 @@
+Flask
+Werkzeug
+opencv-python
+numpy
+Pillow
+scikit-learn
+mtcnn
+tensorflow
+tflite-runtime
+pytest
+requests
