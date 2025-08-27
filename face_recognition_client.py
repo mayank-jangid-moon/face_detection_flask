@@ -19,7 +19,7 @@ import argparse
 class FaceRecognitionAPIClient:
     """Client for interacting with the Face Recognition API."""
     
-    def __init__(self, api_url="http://localhost:5000/recognize_faces"):
+    def __init__(self, api_url="http://localhost:8080/recognize_faces"):
         """
         Initialize the API client.
         
