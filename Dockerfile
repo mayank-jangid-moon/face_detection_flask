@@ -22,10 +22,10 @@ RUN mkdir -p models
 ENV FLASK_APP=app.py
 ENV FLASK_DEBUG=false
 ENV HOST=0.0.0.0
-ENV PORT=5000
+ENV PORT=8080
 
 # Expose port
-EXPOSE 5000
+EXPOSE 8080
 
 # Health check
 HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 \
