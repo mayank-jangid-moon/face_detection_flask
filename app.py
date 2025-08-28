@@ -101,7 +101,7 @@ def calculate_cosine_similarity(embedding1, embedding2):
     cosine_sim = dot_product / (norm1 * norm2)
     return cosine_sim
 
-def find_best_match(face_embedding, similarity_threshold=0.7):
+def find_best_match(face_embedding, similarity_threshold=0.0):
     """Find the best matching person in the reference database."""
     if reference_database is None:
         print("❌ Reference database is None")
@@ -183,9 +183,9 @@ def draw_face_annotation(image, bbox, person_name, similarity_score):
     h = int(bbox['height'])
     
     # Choose color based on similarity score
-    if similarity_score > 0.9:
+    if similarity_score > 0.7:
         color = (0, 255, 0)  # Green for high confidence
-    elif similarity_score > 0.7:
+    elif similarity_score > 0.5:
         color = (0, 165, 255)  # Orange for medium confidence
     else:
         color = (0, 0, 255)  # Red for low confidence

@@ -19,7 +19,7 @@ import argparse
 class FaceRecognitionAPIClient:
     """Client for interacting with the Face Recognition API."""
     
-    def __init__(self, api_url="http://localhost:8080/recognize_faces"):
+    def __init__(self, api_url="http://localhost:5000/recognize_faces"):
         """
         Initialize the API client.
         
@@ -245,9 +245,9 @@ class FaceRecognitionAPIClient:
     
     def _get_confidence_level(self, similarity_score):
         """Determine confidence level based on similarity score."""
-        if similarity_score > 0.9:
+        if similarity_score > 0.7:
             return "HIGH"
-        elif similarity_score > 0.7:
+        elif similarity_score > 0.5:
             return "MEDIUM"
         else:
             return "LOW"
